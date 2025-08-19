@@ -5,10 +5,10 @@ module.exports = function towelSort(matrix) {
 
     if (matrix) {
         for (let i = 0; i < matrix.length; i++) {
-            matrix[i].forEach((_, idx) => {
-                const index = i % 2 === 0 ? idx : matrix[i].length - 1 - idx;
+            for (let j = 0; j < matrix[i].length; j++) {
+                const index = i % 2 === 0 ? j : matrix[i].length - 1 - j;
                 result.push(matrix[i][index]);
-            });
+            }
         }
     }
 
